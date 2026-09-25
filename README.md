@@ -131,6 +131,35 @@ Volunteer Pickup
   ↓
 Food Picked Up
   ↓
+
+                    RESCUEWAVY
+                         │
+        ┌────────────────┴────────────────┐
+        │                                 │
+     Frontend                         AI Layer
+        │                                 │
+     Next.js                         Gemini API
+        │
+        ▼
+   Application Logic
+        │
+   ┌────┼────────────┐
+   │    │            │
+   ▼    ▼            ▼
+ Donor Shelter    Volunteer
+   │    │            │
+   └────┼────────────┘
+        ▼
+     Supabase
+        │
+     PostgreSQL
+        │
+ ┌──────┼───────────────┐
+ ▼      ▼               ▼
+Profiles Donations    Pickups
+            │
+            ▼
+          Matches
 Food Delivered
   ↓
 Impact Dashboard
