@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07100d;
+  --foreground: #f5f7f6;
+  --surface: #0d1915;
+  --surface-soft: #101f1a;
+  --border: #1d3028;
+  --muted: #8d9b95;
+  --primary: #39d98a;
+  --primary-dark: #1fa968;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(57, 217, 138, 0.25);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07100d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d3028;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2b463b;
+}
+
+/* Shared RescueWavy utility classes */
+
+.rw-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.rw-card-hover {
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.rw-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(57, 217, 138, 0.35);
+  background: var(--surface-soft);
+}
+
+.rw-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 11px;
+  background: var(--primary);
+  color: #04100a;
+  font-weight: 700;
+  padding: 11px 17px;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease;
+}
+
+.rw-button-primary:hover {
+  background: #55e3a0;
+  transform: translateY(-1px);
+}
+
+.rw-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: transparent;
+  color: #dce5e1;
+  font-weight: 600;
+  padding: 11px 17px;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.rw-button-secondary:hover {
+  background: var(--surface);
+  border-color: #315044;
+  transform: translateY(-1px);
+}
+
+.rw-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: #09130f;
+  color: #f5f7f6;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.rw-input::placeholder {
+  color: #617069;
+}
+
+.rw-input:focus {
+  border-color: rgba(57, 217, 138, 0.65);
+  box-shadow: 0 0 0 3px rgba(57, 217, 138, 0.08);
+}
+
+.rw-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #b8c5bf;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.rw-muted {
+  color: var(--muted);
+}
+
+.rw-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(57, 217, 138, 0.045),
+      transparent 28rem
+    ),
+    var(--background);
+}
